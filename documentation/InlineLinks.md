@@ -1,5 +1,7 @@
 # Inline Links
 
+Last updated: 16 June 2025
+
 Inline links are not keyboard focusable when using `Text(_: AttributedString)`,
 even when they are correctly attributed. See: <https://github.com/cvs-health/ios-swiftui-accessibility-techniques/blob/main/iOSswiftUIa11yTechniques/Documentation/Links.md>.
 
