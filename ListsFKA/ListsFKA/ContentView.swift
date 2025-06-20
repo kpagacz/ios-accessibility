@@ -13,27 +13,21 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack(spacing: 20) {
                 Button("focusable button") {}
                     .id(Field.fieldId(0))
                     .focusable()
                     .customFocus()
                 
-                Spacer()
-                
                 Text("focusable text")
                     .focusable()
                     .customFocus()
-                
-                Spacer()
                 
                 NavigationLink {
                     TextFieldsList()
                 } label: {
                     Text("List with Text Fields")
                 }
-                
-                Spacer()
                 
                 NavigationLink {
                     ButtonsList() }
@@ -47,7 +41,12 @@ struct ContentView: View {
                     Text("Mixed List with Custom Focus")
                 }
                 
-                Spacer()
+                NavigationLink {
+                    ScrollViewTest()
+                } label: {
+                     Text("Using a Scroll View instead")
+                        .font(.headline)
+                }
                 
                 // navigatioon breaks
                 List {
